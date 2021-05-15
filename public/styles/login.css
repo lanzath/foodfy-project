@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.foodfyLogo-container {
+    margin: 35px 0  147px 0;
+    text-align: center;
+}
+
+.foodfyLogo-container p {
+    font-family: 'Antic Slab', sans-serif;
+    font-size: 28px;
+    color: #111111;
+    letter-spacing: 1.65px;
+}
+
+.content {
+    width: 500px;
+    margin: auto;
+}
+.sessionTitle {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.sessionTitle h1 {
+    font-size: 24px;
+    color: #111;
+}
+
+
+form .fields .item p {
+    font-size: 16px;
+    color: #111;
+    line-height: 19px;
+    margin-bottom: 10px ;
+}
+
+form .fields .item input {
+    background: #FFF;
+    border: 1px solid #DDD;
+    width: 100%;
+    border-radius: 4px;
+    padding: 15px 14px;
+    margin-bottom: 35px;
+    box-sizing: border-box;
+
+}
+
+.buttons {
+    position: relative;
+    height:37px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #969696;
+    line-height: 19px;
+}
+
+.buttons button {
+    background: #6558c3;
+    padding: 9px 36px;
+    border-radius: 4px;
+
+    color: #FFF;
+    font-size: 16px;
+}
+
+.buttons #forgotSubmitButton {
+    position: absolute;
+    right: 0
+}

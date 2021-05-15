@@ -1,0 +1,58 @@
+@keyframes hideCreateMessage {
+    to {
+        opacity: 0px;
+        visibility: hidden;
+    }
+}
+
+@keyframes hideMessages {
+    to {
+        right: -370px;
+        visibility: hidden;
+    }
+}
+
+.createMessages {
+    width:100%;
+    padding: 16px 16px;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 0 0 8px 8px;
+    visibility: initial;
+    opacity: 1;
+    animation: hideCreateMessage 4s ease-in-out forwards;
+}
+
+.createMessages.error {
+    background-color: #DC4747;
+}
+
+.createMessages.success {
+    background-color: #01B12A;
+}
+
+.messages {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 344px;
+    height: 135px;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    top: 12px;
+    right: 18px;
+    visibility: initial;
+    animation: hideMessages 400ms 3s forwards;
+}
+
+.messages.error {
+    background-color: #DC4747;
+}
+
+.messages.success {
+    background-color: #01B12A;
+}

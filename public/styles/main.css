@@ -1,0 +1,952 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    border: none;
+    padding: 0;
+}
+
+:root {
+    --text-color: #111111
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display:flex;
+    flex-direction: column;
+    height: 100vh
+}
+
+.content {
+    margin: 0 230px;
+    position: relative;
+}
+
+header {
+    height: 93px;
+    line-height: 32px;
+    position: relative
+}
+
+#users-page header {
+    display: grid;
+    grid-template-columns: 90.6px 1fr 1fr;
+    align-items: center;
+}
+
+
+.header-links {
+    margin-left: 122.4px;
+    display: flex;
+}
+
+.header-links a {
+    margin-right: 30px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.header-links a.active {
+    font-weight: bold;
+}
+
+header .logoutButton {
+    position: absolute;
+    display: flex;
+    top: 29px;
+    right: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    align-items: center;
+    max-height: 18px;
+}
+
+header .logoutButton button {
+    background: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+
+}
+header .logoutButton a {
+    color: white;
+    text-decoration: none;
+    line-height: 18px;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+
+header .logoutButton > a {
+    margin-right: 8px;
+}
+
+
+#users-page #filterForm {
+    text-align: end;
+}
+
+#users-page #filterForm input {
+    padding: 9px;
+    border: 1px solid rgb(224, 223, 223);
+    box-sizing: border-box;
+    width: 246px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 15px
+}
+
+#users-page #filterForm input::placeholder {
+    color: #999;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+#users-page #filterForm button {
+    padding: 9px 20px;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    font-weight: bold;
+    background: #6558C3;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.introduction {
+    background: #FBDFDB;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+#introduction-text {
+    margin: 117px auto;
+    max-width: 316px;
+}
+
+#introduction-text h1 {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 42px;
+    margin-bottom: 10px;
+}
+
+#introduction-text p {
+    opacity: 0.7;
+    font-size: 18px;
+    color: #000000;
+    line-height: 28px;
+}
+
+.introduction .image-container {
+    position: absolute;
+    bottom: 0;
+    right: 250px;
+}
+
+.introduction-text h1 {
+    font-size: 24px;
+    color: var(--text-color);
+    font-weight: bold;
+    line-height: 34px;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px 20px;
+    margin-bottom: 50px;
+}
+
+.card {
+    cursor: pointer;
+}
+
+#users-page .cards {
+    margin-top: 20px;
+}
+
+.cards.recipes .card section {
+    height: 140px;
+    border-radius: 15px;
+}
+
+
+#admins-page .cards.recipes .card section {
+    height: 80px;
+    width: 172px;
+}
+
+
+.card .image-container img {
+    width: 100%;
+    border-radius: 15px;
+    max-height: 95px;
+}
+
+
+.card .card-info {
+    margin-top: 20px;
+}
+
+.card .recipe-title {
+    font-size: 18px;
+    color: var(--text-color);
+    line-height: 21px;
+    margin-bottom: 5px;
+}
+
+.card .recipe-author {
+    font-size: 14px;
+    color: #777777;
+    line-height: 16px;
+}
+
+footer {
+    background: #EEEEEE;
+    width: 100%;
+    margin-top: auto;
+}
+
+footer p {
+    padding: 23px;
+    text-align: center;
+    color: #999999;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+
+/* ================= ABOUT */
+
+.about-text h1 {
+    margin: 12px 0 20px 0;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 28px;
+    color: var(--text-color);
+}
+
+.about-text h2{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-color);
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+}
+
+/* ============ SEARCH ============== */
+#users-page .searchWrapper {
+    margin-top: 52px;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: bold;
+    color: var(--text-color)
+
+}
+
+/* RECIPE PAGE ============== */
+
+.recipe-apresentation {
+    text-align: center;
+}
+
+.recipe-apresentation img {
+    width: 100%;
+    border-radius: 15px;
+    max-height: 600px
+}
+
+.recipe-apresentation .recipe-info {
+    padding: 50px 0;
+}
+
+.recipe-apresentation .recipe-title {
+    font-size: 36px;
+    color: var(--text-color);
+    font-weight: bold;
+    line-height: 42px;
+    margin-bottom: 4px;
+}
+
+.recipe-apresentation .recipe-author {
+    font-size: 20px;
+    color: #777777;
+    line-height: 20px;
+}
+
+.description-header {
+    margin-bottom: 20px;
+    display:grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+
+.description-header h2 {
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--text-color);
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.description-header .hide {
+    font-size: 12px;
+    color: #999999;
+    font-weight: bold;
+    line-height: 14px;
+    cursor: pointer;
+}
+
+.recipe-description .text {
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+    margin-bottom: 39px;
+    list-style-position: inside;
+}
+
+
+
+
+/* ================ ADMIN PAGE ======================== */
+
+#admins-page header {
+    background-color: #111111;
+    padding: 0;
+    height: 80px;
+}
+
+
+#admins-page header .wrapper {
+    margin-left: 230px;
+    margin-right: 230px;
+    display: grid;
+    grid-template-columns: 141px 1fr;
+    align-items: center;
+
+}
+
+#admins-page header .wrapper .header-links a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #FFFFFF;
+    text-align: left;
+    font-weight: bold;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+#admins-page header .wrapper .header-links a + a {
+    margin-left: 30px;
+}
+
+#admins-page header .wrapper .image-container,
+#admins-page header .wrapper .header-links {
+    margin-top: 25px;
+}
+
+#admins-page header .wrapper .image-container {
+    display: initial;
+    max-height: 27px;
+
+}
+
+#admins-page .content .wrapper {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+#admins-page .content .wrapper a,
+#admins-page .content .wrapper button {
+    text-decoration: none;
+    font-size: 16px;
+    background-color: #6558C3;
+    padding: 9px 20px;
+    color: #FFFFFF;
+    border-radius: 8px;
+    line-height: 19px;
+    cursor: pointer;
+}
+
+#admins-page .content .wrapper button:first-child {
+    background-color: #DC4747;
+    margin-right: 7px;
+
+}
+
+#admins-page .content .wrapper button {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#admins-page .content .wrapper h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #111111;
+    line-height: 28px;
+}
+
+#admins-page .content .cards {
+    margin-top: 30px;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px
+}
+
+#admins-page .content .cards .card {
+    display: grid;
+    grid-template-columns: 172px 1fr;
+    gap: 20px;
+    max-height: 80px;
+    align-items: center;
+    pointer-events: none;
+}
+
+#admins-page .content .cards .image-container {
+    max-height: 80px;
+}
+
+#admins-page .content .cards .card img {
+    width: 172px;
+    height: 80px;
+}
+
+#admins-page .content .cards .card-info {
+    margin: 0
+}
+
+#admins-page .content .cards .card-info p:nth-child(2) {
+    margin-bottom: 10px;
+}
+
+#admins-page .content .cards .card-info a {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 16px;
+    color: #6558C3;
+    font-weight: bold;
+    pointer-events: all;
+}
+
+#admins-page .content form .item p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #111111;
+    font-weight: bold;
+}
+
+#admins-page .content form .item input[type="text"],
+#admins-page .content form .item input[type="password"] {
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    height: 49px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0 8px;
+    box-sizing: border-box;
+
+}
+
+#admins-page .content form .field-group {
+    margin-bottom: 30px;
+}
+
+#admins-page .content form .field-group button {
+    color: #6558C3;
+    font-weight: bold;
+    line-height: 19px;
+    text-decoration: none;
+    margin-top: 15px;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#admins-page .content form .item textarea {
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    resize: none;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+#admins-page .content form .flexFields {
+    display: flex;
+    justify-content: space-between;
+}
+
+#admins-page .content form .flexFields .field-group {
+    width: 100%
+}
+
+#admins-page .content form .flexFields .field-group .item {
+    width: 95%
+}
+
+#admins-page .content form .item#isAdmin {
+    display: flex;
+    align-items: center;
+}
+
+#admins-page .content form .item#isAdmin p {
+    margin-bottom: 0;
+    margin-left: 8px
+}
+
+/* Email Validate error */
+form .item .error {
+    background-color: #e74c3c;
+    padding: 4px;
+    border-radius: 4px;
+    color: white;
+}
+
+/*==================== CHEF PAGE ==================== */
+
+#admins-page .chef_card {
+    text-align: center;
+}
+
+#admins-page .chef_card .image-container {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    margin-top: 21px;
+    border-radius: 50%;
+}
+
+#admins-page .chef_card .chef_info {
+    margin-top: 30px;
+}
+
+#admins-page .chef_card .chef_info h1 {
+    font-weight: bold;
+    font-size: 36px;
+    color: var(--text-color);
+    line-height: 42px;
+}
+
+#admins-page .chef_card .chef_info p {
+    margin-top: 4px;
+    font-size: 20px;
+    color: #777777
+}
+
+#admins-page .chef_receips h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-color)
+}
+
+/* ============================ CHEFS PAGE ============================= */
+
+#admins-page .cards.chefs,
+#users-page .cards.chefs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px 60px;
+
+}
+
+#admins-page .cards.chefs .card,
+#users-page .cards.chefs .card {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+}
+
+#users-page .cards.chefs .card {
+    align-items: center;
+    gap: 0 20px
+}
+
+#admins-page .cards.chefs .card section,
+#users-page .cards.chefs .card section {
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+}
+
+#admins-page .cards.chefs .card .info p,
+#users-page .cards.chefs .card .info p{
+    font-size: 18px;
+    color: var(--text-color);
+    line-height: 21px;
+}
+
+#users-page .cards.chefs .card .info p:nth-child(2) {
+    font-size: 14px;
+    line-height: 16px;
+    color: #666666;
+    margin-top: 5px;
+}
+
+#admins-page .cards.chefs .card .info a {
+    font-size: 14px;
+    color: #6558c3;
+    font-weight: bold;
+    margin-top: 10px;
+    pointer-events: all;
+    text-decoration: none;
+    line-height: 16px;
+}
+
+/* ==================== ADMIN RECIPE FORM ============= */
+
+#admins-page .field-group input {
+    box-shadow: 0 1px 0 1px rgba(85, 59, 59, 0.04);
+}
+
+#admins-page .item select {
+    width: 100%;
+    height: 51px;
+    border: 1px solid #DDD;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: .6em 1.4em .5em .8em;
+    outline: none;
+    box-shadow: 0 1px 0 1px rgba(85, 59, 59, 0.04);
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+      linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: .65em auto, 100%;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#admins-page .item select::-ms-expand {
+    display: none
+}
+
+#admins-page .item select:hover {
+	border-color: #888;
+}
+
+#admins-page .item select:focus {
+	border-color: #aaa;
+	box-shadow: 0 0 1px 1px rgba(59, 153, 252, .7);
+	box-shadow: 0 0 0 3px -moz-mac-focusring;
+	color: #222;
+	outline: none;
+}
+
+/* RECIPE FIELDS - PHOTOS UPLOAD (criação da receita)*/
+
+form .photo-manager {
+    display: flex;
+    align-items: center;
+}
+
+form .item .photos-upload {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 3.5px;
+    margin-right: 8px;
+
+    width: 149px;
+    height: 149px;
+    border: 1px solid #ddd;
+}
+
+form .item .photos-upload i{ /* é o que aparece para o usuário clicar */
+    width: 100%;
+    height: 100%;
+
+    font-size: 400%;
+    color: #777;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form .item #photos-input { /* o input fica "escondido" no photos-upload */
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+form .item .photos-preview {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 8px;
+    margin: 8px 0;
+}
+
+form .item .photos-preview .photo {
+    height: 150px;
+    width: 151px;
+
+}
+
+form .item .photos-preview img {
+    width: 100%;
+    height: 100%;
+    border-radius: 3.5px;
+
+
+    object-fit: cover;  /* para não esticar a foto */
+}
+
+
+.photos-preview .photo {
+    position: relative;
+}
+
+.photos-preview .photo i {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background: rgba(255,255,255,0.8);
+
+    color: red;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 400%;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 200ms
+}
+
+.photos-preview .photo:hover i {
+    opacity: 1
+}
+
+/* CHEF CREATION */
+
+form .item #chef_avatarUpload {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 139px;
+
+}
+
+#admins-page form .item #chef_avatarUpload p{
+    padding: 8px 16px;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px -6px #333;
+    background-color: #6558C3;
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    width: 139px;
+    font-weight: normal;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+form .item #chef_avatarInput {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+::-webkit-file-upload-button {  /* o file:input bugou*/
+    cursor:pointer;
+}
+
+form #avatar-p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #111111;
+    font-weight: bold;
+}
+
+form .item .avatar-preview .avatar {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 1px solid #6558C3;
+
+}
+
+form .item .avatar-preview .avatar i {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(255,255,255, 0.6);
+    color: red;
+
+    opacity: 0;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 400%;
+}
+
+form .item .avatar-preview .avatar:hover i {
+    opacity: 1
+}
+
+form .item .avatar-preview img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* PRODUCT GALLERY */
+.gallery {
+    width: 100%
+}
+
+.highlight > img {
+    width: 100%;
+    height: 280px;
+    object-fit: none;
+}
+
+.gallery .gallery-preview {
+    display: flex;
+    column-gap: 10px;
+    margin-right: auto;
+    justify-content: flex-end;
+
+}
+
+.gallery .gallery-preview img{
+    height: 49.7px;
+    width: 50px;
+    object-fit: none;
+    object-position: 50% 50%;
+    border: 1px solid #efefef;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.gallery .gallery-preview img:hover,
+.gallery .gallery-preview img.active {
+    opacity: 1
+}
+
+/* USER INDEX */
+#admins-page .wrapper #newUser {
+    width: 139px;
+    text-align: center;
+}
+
+#admins-page .cards.users {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 64px;
+    gap: 52px 200px;
+}
+
+#admins-page .cards.users .card {
+    display: block;
+    pointer-events: initial;
+    cursor: initial;
+}
+
+#admins-page .cards.users .card #name {
+    font-size: 18px;
+    color: #111;
+    line-height: 22px;
+    margin-bottom: 4px;
+}
+
+#admins-page .cards.users .card #email {
+    font-size: 14px;
+    color:#777;
+    line-height: 17px;
+}
+
+#admins-page .cards.users .card .buttons {
+    display: flex;
+    margin-top: 16px;
+    align-items: center;
+}
+
+#admins-page .cards.users .card .buttons a {
+    margin-right: 16px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #6558C3;
+}
+
+#admins-page .cards.users .card .buttons button {
+    background: none;
+    font-size: 14px;
+    color: #F55A5A;
+    line-height: 17px;
+    cursor: pointer;
+}
+
+/* pagination */
+.cards.recipes {
+    min-height: 434px;
+}
+.pagination {
+    text-align: center;
+}
+
+.pagination a,
+.pagination span {
+    color: #6558c3;
+    text-decoration: none;
+    margin-right: 16px;
+}
+
+.pagination a:hover {
+    filter: brightness(0.3);
+    border-bottom: 1px solid #6558C3
+}
