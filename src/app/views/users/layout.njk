@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+        <title>Foodfy</title>
+        {% endblock head %}
+        {% include 'users/parts/styles.njk'%}
+    </head>
+
+    <body>
+        <div id="users-page">
+            <section class="content">
+
+                <header>
+                    <div class="image-container">
+                        <a href="/"><img src="/assets/logo.png" alt="Logo"></a>
+                    </div>
+                    <div class="header-links">
+                        <a href="/about">Sobre</a>
+                        <a href="/recipes">Receitas</a>
+                        <a href="/chefs">Chefs</a>
+                        <a href="/login">Login</a>
+                    </div>
+                    <form id="filterForm" action="/search" method="get">
+                        <input
+                            type="text"
+                            name="filter"
+                            placeholder="Buscar uma receita"
+                            value={{filter}}
+                        >
+                        <button type="submit">Buscar</button>
+                    </form>
+                </header>
+
+                {% block content %}{% endblock content %}
+            </section>
+
+        </div>
+
+        {% include "users/parts/footer.njk"%}
+
+        <script src="/scripts.js"></script>
+    </body>
+</html>

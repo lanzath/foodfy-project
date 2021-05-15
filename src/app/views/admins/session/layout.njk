@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% block head %}
+            <title>Login | Foodfy</title>
+        {% endblock head %}
+
+        <link rel="stylesheet" href="/styles/login.css">
+        <link rel="stylesheet" href="/styles/messages.css">
+
+    </head>
+    <body>
+        {% include 'admins/parts/messages.njk'%}
+
+        <div class="foodfyLogo-container">
+            <p>Foodfy</p>
+        </div>
+
+        <div class="content">
+            {% block content %}
+            {% endblock content %}
+        </div>
+    </body>
+</html>

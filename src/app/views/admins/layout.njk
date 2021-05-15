@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+        <title>Foodfy</title>
+        {% endblock head %}
+        {% include 'admins/parts/styles.njk'%}
+    </head>
+
+    <body>
+        <div id="admins-page">
+            <header>
+                <div class="wrapper">
+                    <div class="image-container">
+                        <a href="/"><img src="/assets/admlogo.png" alt="Logo"></a>
+                    </div>
+                    <div class="header-links">
+                        <a href="/admin/recipes">Receitas</a>
+                        <a href="/admin/chefs">Chefes</a>
+                        <a href="/admin/users">Usuários</a>
+                    </div>
+                </div>
+
+                <div class="logoutButton">
+                    <a href="/admin/profile">Minha Conta</a>
+                    {% if session.userId %}
+                    <form action="/logout" method="POST">
+                        <button type="submit">
+                            Sair
+                        </button>
+                    </form>
+                    {% endif %}
+                </div>
+            </header>
+
+            <section class="content">
+                {% include 'admins/parts/messages.njk'%}
+
+                {% block content %}
+
+
+                {% endblock content %}
+            </section>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+{% extends "admins/layout.njk" %}
+
+{% block head %}
+    <title>Criar Receita | Foodfy</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+    <div class="wrapper">
+        <h1>Criando Receita</h1>
+        <button type="submit" form="createForm">Salvar receita</button>
+    </div>
+
+    <!-- o enctype="multipart/form-data" permite que arquivos sejam enviados -->
+    <form id="createForm" action="/admin/recipes" method="post" enctype="multipart/form-data">
+        <section id="createRecipe">
+        {% include "admins/recipes/fields.njk"%}
+        </section>
+    </form>
+
+
+    <script src="/scripts.js"></script>
+{% endblock content %}

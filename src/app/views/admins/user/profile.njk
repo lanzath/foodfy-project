@@ -1,0 +1,53 @@
+{% extends "../layout.njk" %}
+
+{% block head %}
+    <title>Detalhes | Foodfy</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+{% endblock %}
+
+
+{% block content %}
+<div class="wrapper">
+    <h1>Detalhes</h1>
+    <button type="submit" form="updateForm">Salvar</button>
+</div>
+
+<form id="updateForm" action="/admin/profile?_method=PUT" method="POST">
+    <div class="flexFields">
+        <div class="field-group">
+            <div class="item">
+                <p>Nome</p>
+                <input type="text" name="name" value="{{user.name}}">
+            </div>
+        </div>
+
+        <div class="field-group">
+            <div class="item">
+                <p>Email</p>
+                <input type="text" name="email" placeholder="example@gmail.com" value="{{user.email}}" onblur="Validate.aplly(this, 'isEmail')">
+            </div>
+        </div>
+    </div>
+
+    <div class="field-group">
+        <div class="item">
+            <p>Senha</p>
+            <input id="passwordUpdateInput" type="password" name="password">
+        </div>
+    </div>
+
+
+
+    {# <div class="field-group">
+            <div class="item">
+                <p>Senha</p>
+                <input id="passwordUpdateInput" type="password" name="password">
+            </div>
+    </div> #}
+
+    <input type="hidden" name="id" value={{user.id}}>
+</form>
+
+<script src="/scripts.js"></script>
+{% endblock content %}

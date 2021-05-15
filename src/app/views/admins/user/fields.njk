@@ -1,0 +1,22 @@
+<div class="flexFields">
+    <div class="field-group">
+        <div class="item">
+            <p>Nome</p>
+            <input type="text" name="name" value="{{user.name}}">
+        </div>
+    </div>
+
+    <div class="field-group">
+        <div class="item">
+            <p>Email</p>
+            <input type="text" name="email" placeholder="example@gmail.com" value="{{user.email}}" onblur="Validate.aplly(this, 'isEmail')">
+        </div>
+    </div>
+</div>
+
+<div class="field-group">
+    <div class="item" id="isAdmin">
+        <input type="radio" name="is_admin" value="true" {% if user.is_admin == 'true' %} selected {% endif %}>
+        <p>Administrador</p>
+    </div>
+</div>

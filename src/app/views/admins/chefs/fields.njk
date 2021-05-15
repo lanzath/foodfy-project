@@ -1,0 +1,30 @@
+<div class="field-group">
+    <div class="item">
+        <p>Nome</p>
+        <input type="text" name="name" value="{{chef.name}}">
+    </div>
+</div>
+
+<div class="field-group">
+    <p id="avatar-p">Avatar</p>
+    <div class="item" id="avatar-item">
+        <div id="chef_avatarUpload">
+            <input
+            type="file"
+            name="avatar"
+            id="chef_avatarInput"
+            accept="image/*"
+            onchange="chefAvatarUpload.handleFileInput(event)"
+            >
+            <p>Enviar Avatar</p>
+        </div>
+        <div class="avatar-preview">
+            {% if file %}
+            <div class="avatar">
+                <img src="{{file.src}}" alt="{{image.name}}">
+                <i class="material-icons">close</i>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>

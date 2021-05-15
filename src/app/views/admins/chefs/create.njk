@@ -1,0 +1,23 @@
+{% extends "../layout.njk" %}
+
+{% block head %}
+    <title>Cadastrar Chef | Foodfy</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+{% endblock %}
+
+
+{% block content %}
+    <div class="wrapper">
+        <h1>Criando Chef</h1>
+        <button type="submit" form="createForm">Salvar chef</button>
+    </div>
+
+    <form id="createForm" action="/admin/chefs" method="POST" enctype="multipart/form-data">
+        <section id="createChef">
+        {% include "admins/chefs/fields.njk"%}
+        </section>
+    </form>
+
+    <script src="/scripts.js"></script>
+{% endblock content %}

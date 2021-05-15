@@ -1,0 +1,26 @@
+{% extends 'admins/session/layout.njk'%}
+
+{% block content %}
+    <div class="sessionTitle">
+        <h1>Iniciar Sessão</h1>
+    </div>
+
+    <form id="loginForm" action="/login" method="POST">
+        <div class="fields">
+            <div class="item">
+                <p>Email</p>
+                <input type="email" name="email" placeholder="example@gmail.com" value="{{user.email}}">
+            </div>
+
+            <div class="item">
+                <p>Senha</p>
+                <input type="password" name="password">
+            </div>
+        </div>
+    </form>
+
+    <div class="buttons">
+        <a href="/forgot-password">Perdeu a senha?</a>
+        <button type="submit" form="loginForm">Acessar</button>
+    </div>
+{% endblock content %}

@@ -1,0 +1,27 @@
+{% extends "users/layout.njk" %}
+
+{% block head %}
+    <title>Busca | Foodfy</title>
+{% endblock head %}
+
+
+{% block content %}
+
+    <section class="cards chefs">
+
+    {% for chef in chefs %}
+        <div class="card" style="pointer-events: none">
+            <section class="image-container" style="background: url('{{chef.img}}') no-repeat center center / cover";></section>
+            <div class="info">
+                <p>{{chef.name}}</p>
+                <p>{{chef.total_recipes}} {{"receita" if chef.total_recipes == 1 else "receitas"}}</p>
+            </div>
+        </div>
+    {% endfor %}
+
+    </section>
+
+    <script>
+        document.querySelector("#filterForm").style.display = "none"
+    </script>
+{% endblock content %}

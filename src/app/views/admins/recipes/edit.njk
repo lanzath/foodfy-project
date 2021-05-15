@@ -1,0 +1,33 @@
+{% extends "admins/layout.njk" %}
+
+{% block head %}
+    <title>Editar Receita | Foodfy</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+    <div class="wrapper">
+        <h1>Editando Receita</h1>
+        <div class="wrapperButtons">
+            <button type="submit" form="deleteForm">Deletar</button>
+            <button type="submit" form="editForm">Salvar receita</button>
+        </div>
+    </div>
+
+
+    <form id="editForm" action="/admin/recipes?_method=PUT" method="post" enctype="multipart/form-data">
+
+        {% include "admins/recipes/fields.njk"%}
+
+        <input type="hidden" name="id" value={{recipe.id}}>
+    </form>
+
+    <form id="deleteForm" action="/admin/recipes?_method=DELETE" method="post">
+
+        <input type="hidden" name="id" value={{recipe.id}}>
+    </form>
+
+    <script src="/scripts.js"></script>
+{% endblock content %}
